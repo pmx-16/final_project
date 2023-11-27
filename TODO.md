@@ -37,4 +37,8 @@
         - [ ] See detail of all the project
         - [ ] Evaluate project
         - [ ] Approve the project
+### Admin 
+- [ ] **When logged in as an admin, what can a person see and do?**    
+    - [ ] (Admin)
+        - [ ] Can see and modify all data in database  
 
