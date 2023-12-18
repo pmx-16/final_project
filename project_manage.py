@@ -166,15 +166,14 @@ def lead_activities(db, user_id):
         print("1. View/Edit My Project")
         print("2. Send Member Requests")
         print("3. Send Advisor Requests")
-        print("4. View Project Status")
-        print("5. Submit Proposal")
-        print("6. Submit Report")
+        print("4. Submit Proposal")
+        print("5. Submit Report")
         print("0. Exit or Log out")
         choice = input("Enter your choice: ")
         my_project = next((p for p in projects_table.table if p['Lead'] == user_id), None)
 
         if choice == '1':
-            # View/Edit my project logic
+            # View/Edit my project 
             print(f"Project ID: {my_project['ProjectID']}, Title: {my_project['Title']}, Status: {my_project['Status']}")
             edit_choice = input("Do you want to edit the title? (yes/no): ").lower()
             if edit_choice == 'yes':
@@ -183,29 +182,25 @@ def lead_activities(db, user_id):
                 print("Project title updated.")
 
         elif choice == '2':
-            # Logic to send member requests
+            # Send member requests
             potential_member_id = input("Enter the ID of the student to invite: ")
-            # Assume member_requests_table is fetched from the database
             member_requests_table.insert({'ProjectID': my_project['ProjectID'], 'to_be_member': potential_member_id, 'Response': 'pending'})
             print(f"Member request sent to user ID {potential_member_id}.")
 
         elif choice == '3':
-            # Logic to send advisor requests
+            # Send advisor requests
             potential_advisor_id = input("Enter the ID of the faculty to invite as an advisor: ")
-            # Assume advisor_requests_table is fetched from the database
             advisor_requests_table.insert({'ProjectID': my_project['ProjectID'], 'to_be_advisor': potential_advisor_id, 'Response': 'pending'})
             print(f"Advisor request sent to faculty ID {potential_advisor_id}.")
 
         elif choice == '4':
-            # Submit Proposal logic
+            # Submit Proposal 
             print("Submitting proposal for project ID: " + my_project['ProjectID'])
-            # Simulate proposal submission
             print("Proposal submitted. Waiting for advisor approval.")
 
         elif choice == '5':
-            # Submit Report logic
+            # Submit Report 
             print("Submitting report for project ID: " + my_project['ProjectID'])
-            # Simulate report submission
             print("Report submitted. Waiting for advisor approval.")
 
         elif choice == '0':
