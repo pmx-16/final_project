@@ -11,6 +11,29 @@
 2. Run the file project_manage.py
 3. Login into each role
 
+## Roles and Actions.
+
+| Role  | Action                  | Method        | Class   | Completion Percentage |
+|-------|-------------------------|---------------|---------|-----------------------|
+| Admin | View all data | `print`      | `Table` | 40%                  |
+| Admin | Modify user data | `update_role_in_db` | `Table` | 100%         |
+| Lead  | Request a member        | `insert`| `Table` | 100%                 |
+| Lead | Request an advisor | `insert` | `Table` | 100%
+| Lead | Submit proposal | `insert` | `Table` | 30%
+| Lead | Submit proposal | `insert` | `Table` | 30%
+| Lead | View/Edit project | `insert` | `Table`| 100% 
+| Faculty | View advisor request | `search`| `Database` | 100%
+| Faculty | Approve/Deny Advisor request | `insert`| `Table`| 100%
+| Faculty | View all projects | `search` | `Database`| 100%
+| Student | View Project invitation | `search` | `Database` |  100%
+| Student | Create a project | `update_role_in_db`| `Table` |100%
+| Student | Join a project | `insert`|`Table`| 100
+| Member| View/Edit project| `insert`| `Table`| 100%
+| Member | See project status | `search`, `print`| `Database`| 100%
+| Advisor | Approve project| `insert`| `Table`| 70%
+| Advisor | Send evaluation request | `insert`| `Table` | 70%
+| Advisor | View all projects | `search`, `print`| `Database` | 100%
+|Committee| Approve project evaluation | `insert` | `Table`| Assuming around 30%, this whole features of evaluation is still missing|
 
 ## Missing Features and Bugs
 Here are the known issues and incomplete features for each role:
