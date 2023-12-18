@@ -267,10 +267,9 @@ def advisor_activities(db, user_id):
     projects_table = db.search('projects')
 
     print("\nAdvisor Menu:")
-    print("1. View Supervisor Requests")
-    print("2. Respond to Supervisor Requests")
+    print("1. Approve project")
+    print("2. Send evaluation Requests")
     print("3. View All Projects")
-    print("4. Evaluate and Approve Projects")
     print("0. Exit or Log out")
 
     while True:
